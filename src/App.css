@@ -1,0 +1,90 @@
+body {
+  background-image: url('movie-poster-cinema-banner-with-popcorn-soda-clapperboard-glowing-cinema-banner-illustration-vector.jpg');
+  background-size: auto 50%;
+  background-position: center center;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+h1, p, span {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 50px;
+}
+
+.movie-app {
+  padding: 20px;
+}
+
+.movie-app > .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.image-container {
+  position: relative;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.image-container:hover {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  bottom: 0;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.col {
+  flex: 1;
+}
+
+.col-sm-4 {
+  flex-basis: 30%;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #fe9797;
+  outline: none;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.about-content {
+  font-size: 24px;
+}
