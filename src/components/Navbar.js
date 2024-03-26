@@ -13,16 +13,12 @@ import Home from './components/Home';
 import NotFound from './components/NotFound'; 
 
 const App = () => {
-    const [page, setPage] = useState('home'); // يحدد الصفحة التي يجب عرضها
-
-    // دالة تقوم بتغيير الصفحة عند الضغط على الزر
+    const [page, setPage] = useState('home');
     const changePage = (newPage) => {
         setPage(newPage);
     };
-
     return (
         <div className='container-fluid movie-app'>
-            {/* العرض يعتمد على قيمة الصفحة */}
             {page === 'home' && (
                 <Home changePage={changePage} />
             )}
@@ -32,7 +28,6 @@ const App = () => {
             {page === 'about' && (
                 <About changePage={changePage} />
             )}
-            {/* إضافة المكون NotFound */}
             {page === 'notfound' && (
                 <NotFound />
             )}
@@ -44,13 +39,10 @@ const MovieListPage = ({ changePage }) => {
         <>
             <div className='row d-flex align-items-center mt-4 mb-4'>
                 <button onClick={() => changePage('home')}>Home</button>
-                {/* زر يقوم بتغيير الصفحة إلى Home */}
             </div>
             <div className='row d-flex align-items-center mt-4 mb-4'>
                 <MovieListHeading heading='Movies' />
-                {/* قائمة الأفلام */}
             </div>
-            {/* هنا يجب عرض قائمة الأفلام المحملة */}
             {}
         </>
     );
